@@ -1,0 +1,844 @@
+%% Basierend auf einer TeXnicCenter-Vorlage von Tino Weinkauf.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,oneside,12pt]{report}
+% Alternative Optionen:
+%	Papiergröße: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
+% Duplex: oneside / twoside
+% Grundlegende Fontgrößen: 10pt / 11pt / 12pt
+
+
+%% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[onehalfspacing]{setspace}
+%\usepackage{pdfpages}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{geometry}
+\geometry{
+  left=4cm,
+  right=2cm,
+  top=2.5cm,
+  bottom=2.5cm,
+}
+\usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
+
+
+%% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %%Zum Laden von Grafiken
+%\usepackage{subfig} %%Teilabbildungen in einer Abbildung
+%\usepackage{pst-all} %%PSTricks - nicht verwendbar mit pdfLaTeX
+
+%% Beachten Sie:
+%% Die Einbindung einer Grafik erfolgt mit \includegraphics{Dateiname}
+%% bzw. über den Dialog im Einfügen-Menü.
+%% 
+%% Im Modus "LaTeX => PDF" können Sie u.a. folgende Grafikformate verwenden:
+%%   .jpg  .png  .pdf  .mps
+%% 
+%% In den Modi "LaTeX => DVI", "LaTeX => PS" und "LaTeX => PS => PDF"
+%% können Sie u.a. folgende Grafikformate verwenden:
+%%   .eps  .ps  .bmp  .pict  .pntg
+
+
+%% Packages für Formeln %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+
+%% Zeilenabstand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{setspace}
+%\singlespacing        %% 1-zeilig (Standard)
+%\onehalfspacing       %% 1,5-zeilig
+%\doublespacing        %% 2-zeilig
+
+
+%% Andere Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{a4wide} %%Kleinere Seitenränder = mehr Text pro Zeile.
+%\usepackage{fancyhdr} %%Fancy Kopf- und Fußzeilen
+%\usepackage{longtable} %%Für Tabellen, die eine Seite überschreiten
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Anmerkungen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Zu erledigen:
+% 1. Passen Sie die Packages und deren Optionen an (siehe oben).
+% 2. Wenn Sie wollen, erstellen Sie eine BibTeX-Datei
+%    (z.B. 'literatur.bib').
+% 3. Happy TeXing!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optionen / Modifikationen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{optionen} %Eine Datei 'optionen.tex' wird hierfür benötigt.
+%% ==> TeXnicCenter liefert mögliche Optionendateien
+%% ==> im Vorlagenarchiv mit (Datei | Neu von Vorlage...).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\newgeometry{left=4cm, right=2cm, top=2.5cm, bottom=2.5cm,}
+
+%% Deckblatt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Schreiben Sie hier Ihren Text oder fügen Sie eine externe Datei ein.
+
+%\includepdf{titelseite.pdf}
+
+%% Die schönere Version:
+%\input{deckblatt} %%Eine Datei 'deckblatt.tex' wird hierfür benötigt.
+%% ==> TeXnicCenter liefert eine mögliche Deckblattdatei
+%% ==> im Vorlagenarchiv mit (Datei | Neu von Vorlage...).
+
+\renewcommand\abstractname{Abstract}
+\begin{abstract}
+Ziel dieser Bachelorarbeit ist es ein Programm zu entwickeln, mit dem man eine Visualisierung von medizinischer Daten in einer virtuellen Realität ausgeben und auswerten kann. Aufgrund
+\end{abstract}
+
+%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents %Inhaltsverzeichnis
+\cleardoublepage %Das erste Kapitel soll auf einer ungeraden Seite beginnen.
+
+\pagestyle{fancy} %%Ab hier die Kopf-/Fusszeilen: headings / fancy / ...
+
+%% Kapitel / Hauptteil des Dokumentes %%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Schreiben Sie hier Ihren Text oder fügen Sie externe Dateien ein.
+
+%\input{intro} %%Eine Datei 'intro.tex' wird hierfür benötigt.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Im folgenden ein paar Hinweise:
+
+\chapter{Einleitung}\label{einleitung}
+
+Durch die immer stetigere Entwicklung der Computer-Technik wird der Einsatz dieser Maschinen auch für viele weitere Sektoren genutzt, die ursprünglich dafür nicht gedacht waren. So wird mittlerweile an den Schulen Themen behandelt, die früher keine Relevanz gespielt haben, aber aufgrund der fortschreitenden Technik immer wichtiger werden, wie zum Beispiel Medienkompetenz. Doch während an Schulen - trotz vorgegebenn Lehrplan hier noch wenig Fortschritte gemacht werden[001] sind diese Themen in andere Gebiete schon deutlich weiter.\\
+
+So soll zum Beispiel in der Medizin eine künstliche Intelligenz dafür sorgen, dass die Fehlerquote bei Diagnosen deutlich reduziert werden. Auch wurde eine künstliche Nase entwickelt, welche besser Imstande ist einen Geruchssinn wahrzunehmen als das menschliche Gegenstück. [002] Und obwohl die Computertechnik schon in der Praxis, direkt bei den Patienten angewendet wird, ist die moderne Technologie selbst bei der Ausbildung in der Medizin schon fest verankert.\\
+
+So arbeitet Oculus, die Firma hinter dem VR-Headset Oculus Rift seit 2017 mit einem Krankenhaus in Los Angeles zusammen, in dem es für die Auszubildenden VR-Simulationen bereitstellt. Dabei war diese Methode so erfolgreich, dass man diese Programme auf 11 weitere medizinische Einrichtungen ausweitet.[003] \\
+
+Diese Entwicklung zeigt klar auf, dass die Entwicklung in der medizinischen Branche nicht nur durch die Computer-Technik verbessert wurde, sondern neuartige Technologien, wie eben die Virtuellen Möglichkeiten gänzlich neue Methoden und Übungsarten bieten.
+
+\section{Aktuelle Stand der Kunst}\label{aktuellKunst}
+
+Obwohl der neumodische VR-Markt durch die zwei führenden VR-Headsets Oculus Rift und HTC Vive relativ neu erscheint, ist die Entwicklung in der Medizin schon in allen Bereichen ziemlich fortgeschritten. So wird nicht nur die virtuelle Technologie in der Chirurgie eingesetzt, sondern werden damit auch erfolgreich Phobien bekämpft. Hier wird zum Beispiel eine für den Patienten angstauslösende Umgebung erschaffen, in der er sich seine Ängste in einer dennoch sicheren Umgebung stellen kann.[004] \\
+
+Auch gibt es neben den rein für den medizinischen Gebrauch an Krankenhäuser etliche VR-Software, die man diesem Spektrum zuordnen kann und frei zugänglich sind. So gibt etliche VR-relevante Spiele, die dieses Thema als Lernsimulation abdecken.[005]\\
+
+Der aktuelle Stand der Kunst zeigt klar, dass die Nutzung von virtuellen Geräten in der Medizin immer größer wird. Dabei werden auch alle relevante Gebiete abgedeckt, sei es durch passives Lernen oder aktives teilnehmen. Doch diese positive Entwicklung in diesem Bereich ist noch nicht abgeschlossen. Es wird angenommen, dass bis 2020 dieser und den Augmentierungsbereich einen weltweiten Markt von bis zu 2,54 Milliarden Dollar erzeugen. [006] 
+
+\section{Hinführung zum Thema}\label{umlaute}
+
+Eine Recherche der aktuellen Stand der medizinischen Entwicklung hat ergeben, dass zwar fast jeder Bereich abgedeckt wird. Aber die meisten der Programme sind in sich geschlossen, von Firmen entwickelt worden oder speziell für einen Einsatzgebiet gedacht. So fehlt zum Beispiel die Möglichkeit, eine vorhandene Software überarbeiten oder anpassen zu können. So gibt es zwar schon Programme, mit denen man die Anatomie eines Menschen von Innen begutachten kann [005], jedoch ist man hier an ein einziges Modell - eben den Menschen - gebunden.\\
+
+Möchte man zum Beispiel die Gehirne von 2 Menschen untersuchen, dessen Daten in einem .mhd-/.raw-Format vorliegt, so bietet diese Software keine Möglichkeit, eine externe Quelle zu begutachten. Auch gibt es im aktuellen Entwicklungsstand kein frei zugängliches Programm, womit man eigene Daten in der VR auslesen und anschauen kann. Dabei hätte dieses Dateiformat den Vorteil, dass man jede einzelne Schicht - mit den passenden Programmen, wie zum Beispiel ParaView - untersuchen kann. Dennoch fehlt hierfür ein geeignete Software, mit der man dies in einer virtuellen Realität, ähnlich wie die medizinischen Spiele, anschauen kann.\\
+
+Im Rahmen dieser Arbeit soll nun untersucht werden, ob man eine virtuelle Ergebung erstellen, in der man eben solche medizinische Daten untersuchen und begutachten kann. Dabei soll der Faktor hervorgehoben werden, dass man ausschließlich frei zugängliche Software verwendet, so dass eine Weiterentwicklung jederzeit möglich ist.
+
+\section{Ziele und Aufbau der Arbeit}\label{ziel}
+
+Anhand den vorhandenen Daten (mhd. -und .raw-Dateien, Code-Ausschnitte) soll ein Entwicklungsziel für die Software definiert werden. Je nach Problemstellungen sollen Work-Arounds gefunden werden, wodurch sämtliche Anforderungen an dem Programm erfüllt werden.
+
+\subsection{Das optimale Ergebnis}
+
+Das Ziel der Arbeit ist es, eine zumindest rudimentäre Funktionalität der Aufgabenstellung zu gewährleisten. Das soll damit erfüllt werden, in dem eine Liste an Funktionalitäten aufstellt, mit der am Ende das Programm laufen soll, unter Berücksichtigung dass es auf Hardware-Ebene nicht zu stark ausgelastet wird und gleichzeitig schnell genug läuft. Des weiteren soll es Basisfunktionen bieten, worauf sich bei einer eventuellen Weiterentwicklung des Programms aufgebaut werden kann. \\
+
+Folgende Ergebnisse soll die Software schlussendlich erreicht haben:
+
+\begin{itemize}
+         \item Es soll eine virtuelle Umgebung erschaffen werden, die mit einem gängigen VR-Headset (Oculus Rift) funktioniert
+				\item Die mhd. bzw. .raw-Datei soll eingelesen werden, so dass man diese bearbeiten kann
+				\item Man soll - möglichst ohne Verzögerung - die einzelnen Schichten der medizinischen Datei anzeigen lassen können
+				\item Eine rudimentäre Steuerung per Oculus Touch-Controller soll gewährleistet sein.
+   \end{itemize}
+
+\subsection{Vorgehensweise}
+
+Vor der Implementierung der eigentlichen Arbeit muss erst mal geklärt welche Tools in Frage kommen. Anhand den Grundlagen im 2. Kapitel wird geklärt ob diese in Einklang mit den verwendeten Hardware in Kapitel 3 in Frage kommen. Ausgehend von diesem Ergebnis wird im 4. Kapitel ein Lösungsansatz erarbeitet, womit einerseits die Arbeit realisiert werden kann, andererseits auch die geforderten Funktionalitäten, wie z.B. die Schnelligkeit oder auch die Hardware-Anforderungen erfüllt werden. Anschließend folgt eine Beurteilung der Arbeit und einen Ausblick darauf, in weit man das Programm noch verbessern kann bzw. ob man auf diesem Programm aufbauen kann für eine Weiterentwicklung. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Grundlagen und Auswahl der Software}\label{grund}
+
+Um sinnvoll an ein Konzept für so eine Arbeit anfangen zu können muss erst mal geklärt werden, welche relevanten Tools und Programme in Frage kommen. Einen Stand der aktuellen Recherche ergeben, dass die folgenden 3, frei zugängliche Programme grundsätzlich in der Lage wären, eine Entwicklung in der Virtuellen Umgebung umzusetzen und die Aufgabenforderungen zu erfüllen:\\
+
+\begin{itemize}
+      \item Unreal Engine 4
+      \begin{itemize}
+         \item Die Unreal Engine 4 ist eine leistungsstarke, von 	Epic Games entwickelte Computer-Spiel-Engine. Da die primäre Programmiersprache C++ ist, welche nicht im Laufe des Hochschuls-Studium bearbeitert wurde, ist diese trotz ihrer sehr guten Performance weniger geeignet für dieses Projekt. Durch ihre Leistungsstärke wäre es aber für einen alternativen Ansatz interessant, da diese die Unterstützung für alle gängen VR-Headsets bietet[007]
+      \end{itemize}
+      \item Unity Engine
+      \begin{itemize}
+         \item Die Unity-Engine, welche entwickelt wird von Unity Technologies ist ebenfalls wie die Unreal-Engine eine Entwicklungsumgebung primär für Video-Spiele. Diese zeichnet sich vor allem durch ihre Benutzerfreundlichkeit aus. Als Hauptprogrammiersprache unterstützt die Engine C#. Auch Python, für Skriptsequenzen, wird unterstützt.
+      \end{itemize}
+			\item Vizard VR
+      \begin{itemize}
+         \item Vizard VR ist eine für Virtueller Realitäten spezialisierte Entwicklungsumgebung, entwickelt von WorldViz. Die Plattform, welche mit Python programmiert wird demonstriert mehrere beeindruckende VR-Demos, wodurch man die Leistungsstärke der Umgebung erahnen kann. Da sowohl Oculus Rift als auch die HTC Vive vollständig unterstützt wird, wurde als Hauptprogramm für die Entwicklung dieser Arbeit auf dieses Programm gesetzt.
+      \end{itemize}
+      \end{itemize}
+		
+
+\section{Vizard VR}\label{vizard}
+
+Vizard VR ist eine frei zugängliche auf Python basierende Entwicklungsplattform, spezialisiert auf eine Programmierung in der Virtuellen Realität. Neben der Verfügbarkeit der aktuellen Main-Stream Head-Mounted Displays (HMD), wie zum Beispiel der Oculus Rift als auch der HTC Vive, hat diese Umgebung ebenfalls den  Vorteil, dass es darin - quasi als Beispiele - vorgefertigte Umgebungen liefert, wodurch in dieser Arbeit das Erzeugen von zum Beispiel eines virtuellen Umgebung (Räume, Texturen, usw.) wegfällt, und man sich auf andere Teile der Arbeit spezialisieren kann. Des weiteren bietet die Umgebung mehrere Programme, wie zum Beispiel Vizconnect, wodurch man einfach die Bewegungssteuerung der VR-Hardware - in diesem Fall die Oculus Touch - mit dem Hauptprogramm verbinden kann. Auch das Tutorial und die Dokumentation von Vizard ist für Anfänger geeignet. [008] Daneben bietet es noch etliche Demos, womit die Fähigkeiten der Plattform demonstriert werden. [009] Neben der freien Version gibt es noch die Möglichkeit, eine kostenpflichtige Lizenz für das Programm beantragen zu können. Die Software in dieser Arbeit wurde primär mit einer kostenpflichtigen Version (Vizard 5) und der freien Version (Vizard 6) erstellt.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.90\textwidth]{vizard6.JPG}
+	\caption{Benutzeroberfläche von Vizard 6}
+	\label{fig:vizard6}
+\end{figure}
+
+
+\section{Python}\label{python}
+
+Dadurch dass Vizard VR Python als Programmiersprache voraussetzt wird die ausgewählte Programmiersprache quasi automatisch damit entschieden. Dennoch hat die Programmiersprache einige Vorteile gegenüber zum Beispiel Java oder C++ [010]:
+
+\begin{itemize}
+         \item Die Programmiersprache ist Open Source. Das heißt, sie ist vollständig frei zugänglich, ohne Mehrkosten.
+				\item Das "`Python Package Index"' bietet eine sehr große Auswahl an Module an, die in Python integriert werden können. Numpy, eines solcher Module wird zwingend für diese Arbeit verwendet, um große Arrays mit Daten manipulieren zu können.
+				\item Ebenfalls wie Vizard bietet Python eine große Auswahl an Tutorials und Anleitungen.
+				\item Dadurch, dass Python als höhere Programmiersprache eingestuft wird, muss man im Verhältnis zu zum Beispiel Java deutlich weniger LoC (Lines of Code) schreiben.
+				\item Durch den kürzeren Schreibaufwand und der Eigenart weniger Schlüsselwörter zu besitzen wird eine deutlich übersichtlichere Darstellung erzeugt.
+   \end{itemize}
+
+\section{mhd.- und .raw-Dateien}\label{mhd}
+
+Als Ausgangs-Dateien, mit denen das vorhandene Programm entwickelt werden soll, wurden mehrere Dateien - sogenannte .mhd und .raw Dateien zur Verfügung gestellt. In dieser Arbeit wird primär die den medizinischen Bildern eines Karpfen (carp.mhd / carp.raw) verwendet. Diese Meta-Bilder wurde unter anderem für den medizinischen Bereich entwickelt, um zum Beispiel die Möglichkeit zu haben, Blutgefäße von Innen zu beobachten oder diese Daten auswerten zu können[011].
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Anforderungen an die Hardware}\label{tools}
+
+Dadurch dass nun die zu verwendete Software für die Arbeit bestimmt wurde, müssen die Kriterien für die Hardware festgelegt werden, so dass das Programm schlussendlich funktioniert. Auch müssen die aktuellen Firmware der Hardware kompatibel mit der auswählten Software sein.\\
+
+In diesem Kapitel wird dementsprechend geklärt, welche Aufgaben die verwendete Hardware regeln muss, und einen Überblick darüber gegeben, auf welche Firmware-Versionen die Software schlussendlich angepasst wurde.
+
+\section{Problem der Rechenleistung}\label{rechenleistung}
+
+Außerhalb der Verarbeitung in der VR gibt es einige gebräuchliche Tools, mit denen man die einzelnen Schichten einer mhd-/Raw-Datei anzeigen lassen kann. Da die benötigte Zeit um eine Schicht einer mhd-Datei anzeigen mehrere Sekunden dauern kann (zum Beispiel in einem Programm wie ParaView), muss eine Möglichkeit gefunden werden, dies mit so möglich wenig Rechenzeit zu erreichen. Hierfür muss also eine Methode gefunden werden, um das bei der Leistung der heutigen Desktop-PCs zu erreichen.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.80\textwidth]{paraview.JPG}
+	\caption{ParaView: Anzeigen einer einzelnen Schicht}
+	\label{fig:paraview}
+\end{figure}
+
+Da die finale Funktionalität sich dadurch auszeichnen soll, dass das Wechseln der Schichten ohne Verzögerung funktioniert, stellt sich hier eine Anforderung an die Software-Implementierung. Dieser Faktor ist vor allem deswegen wichtig, da eine zu starke Verzögerung oder eine zu niedrige Bildwiederholrate Motion-Sickness in der Virtuellen Umgebung auslösen kann.[012] Ein Upgrade der PC-Hardware wäre in diesem Fall möglich, jedoch sollte das Programm schlussendlich auf möglichst viele Hardware-Kombinationen laufen.
+
+\section{Verwendung aktueller VR-Hardware}\label{oculus}
+
+Da die Arbeit ausschließlich auf die Verwendung von Head-Mounted Displays in der VR basiert, muss es zumindest auf eine der großen Hardware-Entwickler spezialisiert werden, und gleichzeitig die Voraussetzung dafür geschafft werden, dass dieses Programm auch auf alternativen Geräten funktionieren kann.
+
+\subsection{Oculus Rift}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.70\textwidth]{standardbild.jpg}
+	\caption{Oculus Rift CV1 und 2 Sensoren}
+	\label{fig:standardbild}
+\end{figure}
+
+Die in dieser Arbeit hauptsächlich verwendete HMD ist die Oculus Rift Consumer Version 1 (CV1) unter der Firmware-Version 709/b1ae4f61ae. Zur Unterstützung werden 2 nicht stationäre Sensoren verwendet, welche gegenüber aufgestellt werden. Damit soll erreicht werden, dass man sich zentral im Feld sich befindet, gleichzeitig aber keine Sensor-Abbrüche stattfinden. Da bei der Verwendung von Vizconnect (siehe Kapitel Lösungsansätze / Bedienung) alle Elemente in Vizard 6 unterstützt werden, wurde hier die Basis für die Hardware-Bedienung geschaffen.\\
+
+Da die Bildwiederholfrequenz der Oculus Rift bei 90 Hertz liegt, muss zwingend die Anforderung an der Software sein, diese so nah wie möglich zu erreichen.
+
+\subsection{Oculus Touch}
+
+Ebenfalls wie das HMD muss die Hardware so gewählt werden, dass es möglich ist diese in Vizard VR zu verwenden. Da Oculus Rift standardmäßig auf den XBox One-Controller läuft, bzw. als Alternativ-Steuerung die Touch-Controller für Bewegung in der VR anbietet, ist eine Kompatibilität mit der Entwicklungs-Umgebung erforderlich. Beide Eingabe-Geräte werden ebenfalls von Vizconnect unterstützt. 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.70\textwidth]{standardbild.jpg}
+	\caption{Bedienungselement: 2 Oculus Touch-Controller}
+	\label{fig:standardbild}
+\end{figure}
+
+Durch die freie Handbewegungen mit der Touch-Controllern soll hier die Anforderung gestellt werden, dass man damit in der virtuellen Umgebung interagieren und die Schicht bearbeiten kann.
+
+\subsection{Alternative VR-Hardware}
+
+Trotz der explizit ausgewählten Hardware soll es zumindest die Möglichkeit geben, dass Programm auch auf anderer VR-Software zum laufen zu kriegen. Da die HTC-Vive vom Setup her ähnlich wie die Oculus Rift aufgebaut ist, unterstützt Vizard / Vizconnect auch diese Hardware. Dennoch muss für jede Hardware ein eigenständige Datei erstellt werden (siehe Beispiel für Oculus Rift, Kapitel unten). Dabei soll allerdings die Grundvoraussetzung geschafft werden, dass im Python-Code in Vizard selbst keine Anpassung für ein anderes HMD notwendig ist. Diese Arbeit konzentriert sich dennoch ausschließlich auf die Implementierung mit der Oculus Rift. Trotz allem ist Vizconnect dennoch kompatibel zu allen möglichen VR-Headsets, darunter auch die für Smartphones.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Lösungsansätze}\label{lösung}
+
+Nachdem nun geklärt wurde, mit welcher Hardware und Software das Projekt realisiert wird, müssen nun im Rahmen dieser Forschung festgelegt werden, wie das Programm am Ende schlussendlich funktionieren soll. Dabei fliesen hier auch Überlegungen mit ein, die relativ früh wieder überworfen wurden. Aufgeteilt wird diese Vorgehensweise wesentlich in 2 Teile: Einerseits die Funktionalität im Hintergrund, die Abseits des Nutzers ablaufen soll und ausschließlich in Vizard implementiert wird, andererseits die Steuerung, mit dem die Funktionen bedient werden können. Bei beiden Fällen muss berücksichtigt werden, dass man immer erst eine Testumgebung, ohne VR bzw. dessen Steuerung hat, um alle Implementierungen testen zu können.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.70\textwidth]{flussbaum.png}
+	\caption{Schema-Bild der Funktionalität des Programm-Codes}
+	\label{fig:flussbaum}
+\end{figure}
+
+
+\section{Funktionalität im Hintergrund}\label{hintergrund}
+
+Damit das Projekt am Ende erfolgreich funktioniert, müssen bestimmte Basisfunktionen vorhanden sein. Als Vorbild wurden dabei Programme verwendet, die eine ähnliche Funktion anbietet, allerdings ohne eine Virtuelle Umgebung. Primär wurden dabei die beiden Programme ITK-Snap und ParaView verwendet. Beide Tools ermöglichen die Visualisierung einzelner Schichten von mhd.-/.raw-Dateien. 
+
+\subsection{Visualisierung der Schichten}
+
+Als Erstes muss eine Möglichkeit gefunden werden, eine einzelne Schicht der Dateien auslesen und anzeigen lassen zu können. In dem vorhandenen Format muss es also möglich sein die Daten so abrufen zu können, dass man einzelne Schichten klar definiert anzeigen lassen kann. Dabei muss eine Umwandlung vorgenommen werden - zum Beispiel zu einem Numpy-Array, womit man exakt die einzelne Werte hernehmen und visualisieren lassen kann. 
+
+\subsection{Verschiebung der Ebenen}
+
+In ParaView konnte man die Verschiebung der einzelnen Ebenen erreichen, indem man eine Ebene in die Grafik hineinzieht, wodurch nach kurzer Bearbeitungsdauer die angeforderte Grafik angezeigt wird. Eine ähnliche Funktion soll hier auch realisiert werden, jedoch ohne die Bearbeitungszeit. Dabei soll eine Möglichkeit gefunden werden, anhand den vorhandenen Achsen-Werten die Grafik optisch nach vorne oder nach hinten verschieben zu können, wodurch bei jedem Vorgang die Anzeige mit dem neuen Bild aktualisiert wird. 
+
+\subsection{Virtuelle Umgebung}
+
+Um das Programm sinnvoll ausführen zu können, muss ein geeigneter, virtueller Raum vorhanden sein. Um sich bei diese Arbeit auf die Implementierung der Schichten zu konzentrieren, soll hier ein vorgefertigte Demo-Umgebung verwendet werden.
+
+\section{Bedienung}\label{bedienung}
+
+Um eine optimale Steuerung in der VR zu gewährleisten, sollte eine möglichst freundliche Bedienungsart gefunden werden. Da der Benutzer keine Möglichkeit hat, eine Tastatur sinnvoll mit einer VR-Brille zu bedienen, muss eine Bedienbarkeit abseits von der üblichen PC-Eingabegeräte gefunden werden.\\
+
+Da man bei Tests ohne einer virtuellen Umgebung keine VR-Geräte wie die Touch-Controller bedienen kann, muss dennoch eine Möglichkeit gefunden werden, sowohl Tastatur als auch Maus bedienen zu können. Eine grafische Benutzeroberfläche, die nur auf dem Desktop-Monitor angezeigt wird, wäre eine Lösung.
+
+\subsection{Steuerung mit Oculus Touch}
+
+Da sowohl die linke als auch die rechte Hand in einer virtuellen Umgebung mit den Touch-Controllern simuliert werden kann, muss hierfür eine sinnvolle Bedienung gefunden werden. Als Unterstützungstool soll Vizconnect zum Einsatz kommen. Dieses Programm ist ein Tool für Vizard, dass ohne Programmierkenntnisse eine Verknüpfung von Tracker (in dem Fall der Kopf durch das HMD)mit der linken und rechten Hand ermöglicht. Dabei werden sogenannte Tools angeboten, wodurch man zum Beispiel eine Grabber-Funktion mit der rechten Hand, also dem rechten Touch-Controller verknüpfen kann.\\
+
+ Um für diese Arbeit eine ordentliche Steuerung anbieten zu können soll es möglich sein, über die Laserpointer bzw. Highlighter-Funktion (Markierungsmöglichkeit aus der Entfernung) die Schicht auswählen und damit interagieren zu können. Des weiteren soll es möglich sein, sich ohne echte Bewegung durch die Sticks in der virtuellen Umgebung sich bewegen zu können. Hierfür ist es erforderlich, dass man alle Bedienungselemente des Controllers mit der zugehörigen Funktion verknüpft.  
+
+\subsection{Alternative Steuerungen}
+
+Abseits der oben genannten finalen Steuerung soll auch eine Möglichkeit gefunden werden, das Programm ohne dein Einsatz von virtuellen Geräten steuern zu können. Dabei soll es allerdings möglich sein, ohne Veränderung des Quelltextes beide Bedienungsarten verwenden zu können.
+
+\section{Exkurs: Fehlgeschlagene Ansätze}\label{exkurs}
+
+Durch die Recherche im Internet, wie man das Projekt am besten erfolgreich lösen kann, wurden mehrere Lösungsansätze und Prototypen erstellt, die von dem endgültigen Ergebnis deutlich abweichen. In diesem Punkt sollen kurz 2 Alternativen vorgestellt werden, die sich jedoch als falsch bzw. als nicht realisierbar herausgestellt haben.
+
+\clearpage
+
+\subsection{Schichten darstellen aus einer .STL-Datei}
+
+Zu Beginn der Arbeit wurde ein Code-Ausschnitt bereitgestellt, der eine .mhd-Datei in ein Numpy-Array-Format umwandelt. Da zu Beginn des Projekts den Entschluss gefasst wurde, keinen vorhandenes Gerüst zu verwenden, wurden mehrere Alternativ-Methoden entwickelt, die das ähnlich, oder in einer anderen Art und Weise erledigen.\\
+
+Eine der ersten Überlegungen war es, die mhd./.raw-Datei in eine .STL-Datei umzuwandeln. Dies ist eine Oberflächensprache, woraus sich die Bilder dann aus Dreiecken zusammensetzen. Erreicht werden sollte damit eine optisch deutlich schönere Darstellung. Da weder die Umwandlung weder optisch funktioniert hat, noch die Performance passend war, wurde dieser Ansatz sehr schnell wieder fallen gelassen.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.70\textwidth]{screen1.jpg}
+	\caption{STL Datei Bild}
+	\label{fig:standardbild}
+\end{figure}
+
+Da die .STL über 700 Megabyte groß war, wurde die Erkenntnis gewonnen, dass das Laden einer ziemlich großen Datei in Vizard Probleme macht. So hat der Programm-Starb beim Laden dieser Datei über 30 Sekunden gedauert. Dieses Problem hat nur unterstrichen, dass dieser Ansatz nicht realisierbar ist.
+
+\subsection{Visualisierung der Schicht in 3D}
+
+Da die finale Implementierung auf einer 2D-Fläche basiert (ein Rechteck), wurde anfangs überlegt, ob es nicht möglich wäre die Darstellung auf einer 3D-Fläche, wie zum Beispiel einen Kreis zu projektieren. Ziel hierbei wäre es gewesen, dass sich anhand der Werte der Schicht die 3D-Fläche sich dieser anpasst, um quasi ein 3-dimensionales Objekt zu haben. \\
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{3dtexture.JPG}
+	\caption{Code-Ausschnitt des Versuchs}
+	\label{fig:3dtexture}
+\end{figure}
+
+Zwar konnte man damit eine 3D-Fläche mit einer Textur bedecken, jedoch erlangte man damit nicht den gewünschten Effekt.\\
+
+Da bei dieser Vorgehensweise in kurzer Zeit kein Fortschritt gemacht werden konnte, wurde diese Überlegung auch wieder fallen gelassen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Imports}\label{import}
+
+Für die Entwicklung des Programms werden mehrere Pakete (Imports) verwendet. Neben Standard-Imports, bei denen es nicht nötig ist ein Paket zu installieren, wurden auch mehrere Pakete über den Vizard Package Manager installiert. Die folgende Liste zählt nur die wichtigsten auf.\\
+
+Als Vorbereitung für das Programm muss man folgende Pakete und Imports in Vizard einbinden:
+
+\begin{itemize}
+			\item os
+      \begin{itemize}
+         \item Os  ist ein Modul, welches System-Operationen bereitstellt. Hiermit wird der Ordner "`textures"' erzeugt, in dem die Texturen temporär gespeichert.
+      \end{itemize}
+			 \item shutil
+      \begin{itemize}
+         \item Shutil wird benötigt, damit immer nur eine Textur im Ordner "`textures"' gespeichert wird. Würde dieser Import fehlen, würden alle Texturen in dem Ordner abgespeichert werden. Da es nicht der Sinn dieses Projekt ist, Texturen zu speichern, ist diese Funktion unumgänglich. 
+      \end{itemize}
+      \item Pillow Version 2.9.0 (from PIL import Image)
+      \begin{itemize}
+         \item Mit diesem Paket kann man Bildmanipulationen vornehmen. Hier wird die Image-Modul verwendet. Dies ist dafür nötig, um aus den Daten eines Array ein Bild zu erzeugen.
+      \end{itemize}
+			\item Numpy Version 1.15.4
+      \begin{itemize}
+         \item Wird benötigt, um Numpy-Arrays-Aktionen vorzunehmen.
+      \end{itemize}
+				\item vizconnect
+      \begin{itemize}
+         \item Wird benötigt, Vizconnect benutzen zu können.
+      \end{itemize}
+      \end{itemize}
+
+\clearpage
+
+Im folgenden Bild ist die Übersicht aller Imports zu sehen. Diese sind zwingend erforderlich, damit das Programm fehlerfrei bzw. überhaupt starten kann.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{imports.JPG}
+	\caption{Alle Imports auf eine Blick}
+	\label{fig:imports}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Implementierung der Funktionen}\label{implen}
+
+Dieses Kapitel erklärt die vollständige Implementierung des Hauptprogramms anhand von Code-Ausschnitten und Interface-Bilder. Es beschränkt sich dabei ausschließlich auf die fertige Datei, jedoch nicht auf die Ansätze die verworfen und nicht verwendet wurden.\\
+
+Um die Implementierung logisch zu gliedern, werden die einzelne Abschnitte in 4 Bereichen unterteilt und erklärt:
+
+\begin{itemize}
+		\item Als erstes wird kurz auf den Ausgangscode des Programms eingegangen. Dieser wurde von Herr Rösch zur Verfügung gestellt. Zwar wurde wie in Kapitel (Exkurs) erklärt versucht, einen eigenen, anderen Ansatz zu finden, schlussendlich wurde jedoch der vorgegebene Code verwendet. 
+
+		\item Danach wird näher auf die Implementierung der Mechanik eingegangen, die grundsätzlich durchgehend läuft und immer funktionieren muss. Primär geht es hier darum, wie die einzelnen Schichten bzw. dessen Texturen erstellt werden und wie man auf die unterschiedlichen Schichten zugreifen kann.
+
+    \item Daraufhin wird erklärt, wie man eine Steuerung implementiert hat, die sowohl eine Tastatur- und Maus-Steuerung enthält als auch ein Versuch, das mit den Touch-Controllern umzusetzen. Hierfür wurde das Vizard VR-Tool Vizconnect verwendet.  In diesem Unterkapitel werden auch die GUI-Elemente, wie zum Beispiel den Schichten-Schieberegler beschrieben.
+		
+		\item Als letztes werden noch auf 2 Test-Fälle eingegangen, die zwar während des eigentlichen Programms nicht laufen, allerdings man jederzeit wieder aktivieren kann. Hierfür ist es jedoch notwendig das man den Quellcode bearbeitet bzw. die richtigen Stellen wieder auskommentiert.
+			
+\end{itemize}
+
+\section{Vorhandenes Code-Gerüst}\label{basis}
+
+Mit dem vorhandenen Code wurde die Grundfunktionalitäten geschaffen, die Daten aus einer .mhd-Datei lesen zu können. Hierfür wird der Import "`Numpy"' benötigt.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{coderoesch1.JPG}
+	\caption{Vorhandener Code, Teilausschnitt 1}
+	\label{fig:coderoesch1}
+\end{figure}
+
+Mit diesem Code lässt sich somit die Daten des Numpy-Arrays auslesen, womit im weiteren Teil gearbeitet werden kann.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{coderoesch2.JPG}
+	\caption{Vorhandener Code, Teilausschnitt 2}
+	\label{fig:coderoesch2}
+\end{figure}
+
+Da nun alle Daten der Grafik vorhanden sind, kann man einzelne ELemente herausschneiden, wodurch ein 2D-Bild entsteht.
+
+\section{Der Code im Hintergrund}\label{code}
+
+Der wichtigste Teil der Arbeit besteht darin, dass einerseits die Textur der Schichten richtig angezeigt werden, als auch der Wechsel zu einer neuen Schicht reibungslos funktioniert. In diesem Unterkapitel werden die folgenden 3 Implementierungen näher erklärt, so dass man die Grundfunktionen des Programms versteht:
+
+\begin{itemize}
+      \item Initialisierung und Darstellung der ersten (Dummy-)Schicht
+      \begin{itemize}
+         \item Zu Programmstart muss neben dem virtuellen Raum auch die Leinwand erzeugt werden, worauf die einzelnen Schichten projektiert werden. Dafür muss eine einzelne "`Dummy-Schicht"' zum Programmstart erzeugt werden, welche allerdings nicht zu den Original-Texturen gehört.
+      \end{itemize}
+      \item Erstellung einer neuen Textur/Schicht während der Ausführung
+      \begin{itemize}
+         \item Als zweite wichtige Hauptaufgabe des Programmes zählt das Wechseln der Schicht. Hierfür musste eine Lösung gefunden werden, die dafür sorgt das eine neue Textur erstellt wird, während die alte, nicht mehr benötigte Datei überschrieben wird.
+      \end{itemize}
+			\item Die aktuelle Textur ändern und anpassen
+      \begin{itemize}
+         \item Gleichzeitig muss die neue Textur wieder auf die Leinwand übertragen werden. Dies alles muss fließend übergehen. 
+      \end{itemize}
+      \end{itemize}
+
+\subsection{Initialisierung der ersten Dummy-Schicht}
+
+Zum Programmstart ist es wichtig, dass sofort eine Textur - egal ob echt oder nicht - hergestellt wird. Diese braucht man, damit die Leinwand, welche erstellt wird, sofort ein Bild dargestellt wird. In dieser Arbeit handelt es sich einfach um die erste Textur, die das Array liefert, also an der Stelle 0. 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{dummy.jpg}
+	\caption{Erzeugung der ersten Textur}
+	\label{fig:dummy}
+\end{figure}
+
+Die Zeile
+
+\begin{center}
+"`testSliceConvert = image.dataArray[:, 0, :]"'
+\end{center}
+
+Bedeutet, dass die einzige Zahl, die hier verändert wird, die 0 ist. Damit "`rutscht"' man quasi immer an der betroffenen Achse entlang, um immer wieder ein neues Bild zu laden.
+
+\subsection{Eine neue Textur erstellen}
+
+Da das Hauptaufgabenziel der Arbeit war, eine Veränderung der Textur während des laufendes Betriebes zu ermöglichen, musste eine Methode gefunden werden die das ermöglicht.\\
+
+Der nachfolgende Code-Ausschnitt zeigt den Bereich des Programms, in der dies bewerkstelligt wird:
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{createTextureonthefly.jpg}
+	\caption{Die benötigte Textur wird erstellt}
+	\label{fig:createTextureonthefly}
+\end{figure}
+
+Als erstes wird ein Ordner erzeugt, in der die Texturen gespeichert werden. Hierfür wird die Importfunktion "`os"' verwendet. Sollte der Ordner ("`textures"') schon erstellt worden sein, wird dieser verwendet. Andernfalls wird eben dieser neue Ordner, an dem Ort wo die Python-Datei ausgeführt wird, erstellt.\\
+
+Im weiteren Verlauf des Codes wird durch die "`textureNumber"' bestimmt, um welche Schicht es sich handelt. Diese liegt zwischen 0 und 255. Bestimmt wird diese durch den Slider, der in Kapitel (GUI) näher erklärt wird. Daraufhin wird dieser Code abgespeichert als 
+
+\begin{center}
+"`textures/TextureConvert + die Nummer (0 - 255)"'
+\end{center}
+
+und in den Ordner "`textures"' gespeichert. Dieser Vorgang wird jedes mal wiederholt, wenn man an den Schieberegler für die Schichten einen neuen Wert einstellt.
+
+\subsection{Die Textur der Schicht ändern}
+
+Im oberen Abschnitt wurde zwar nun eine neue Textur erstellt und gespeichert, jedoch wurde die Leinwand darauf noch nicht geupdatet. Dies geschieht durch die untere Methode.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{changeslicetexture.JPG}
+	\caption{Die aktuelle Textur wird ausgegeben}
+	\label{fig:changeslicetexture}
+\end{figure}
+
+In der Zeile 
+
+\begin{center}
+"`pic = viz.addTexture(TextureName)"'
+\end{center}
+
+wird die Leinwand mit der neuen Textur bestückt. Da "`TextureName"' aus exakt dem selben Wert besteht wie die neu abgespeicherte Textur (sliceNumber ist der Wert des Sliders, der gleich ist mit der Nummer der Schicht), wird das richtige Bild nun auf die Leinwand gebracht.\\
+
+Die Zeile 
+
+\begin{center}
+movementNumber = 3.0
+\end{center}
+
+liefert dabei eine andere Funktion: Um einen gewissen "`3D-Effekt bei der Verschiebung zu erzeugen, sorgt dieser Wert dafür, dass sich die Leinwand optisch nach hinten verschiebt. Der Startwert ist dabei die 3.0, was gleichzusetzen ist mit der Schicht 0 der mhd.-Datei. Je nachdem, wie höher die Zahl der Schicht ist, bis zum Maximalwert 255, verschiebt sie sich noch weiter nach hinten. Der Ausgangswert und auch der Multiplikator dafür wurde so festgelegt, dass bei der Darstellung in der virtuellen Umgebung einerseits der Effekt stark genug dargestellt wird, andererseits allerdings nicht zu extrem, so dass die Leinwand immer noch in Reichweite des Benutzers sich befindet.\\
+
+Mit diesen 3 Funktionen wurde nun die Grundlage geschaffen, dass sich einerseits die Schicht sehr schnell erneuert, auf die Leinwand projektiert wird und gleichzeitig beim Start einen Standardwert lädt.
+
+\section{Tests}\label{tests}
+
+Während der Entwicklung des Programms wurden mehrere Tests entwickelt, welche die vorhandene Funktionen überprüfen sollen. Während die meisten Testfälle wieder entfernt wurden, da entweder dessen Funktion nicht mehr verwendet wird, werden die folgenden zwei weiterhin verwendet. Sollte man zum Beispiel eine andere mhd.-Datei testen wollen, lohnt es sich die beiden Testfälle zu verwenden damit man diese auf Fehler überprüfen kann, oder ob es funktioniert.\\
+
+Diese Testzwecken und alle weiteren, die nicht hier nicht weiter dokumentiert werden, wurden grundsätzlich auskommentiert. Allerdings soll das Programm gewährleisten, dass bei einer Reaktivierung dieser Fälle es zu keine weitere Probleme kommt.
+
+\subsection{Erzeugung aller Schichten}
+
+Während der Benutzung des Programms ist es nicht möglich, alle einzelne Schichten gezielt einzeln durchzugehen. Da keine Anzeige implementiert wurde, bei welcher Schicht man aktuell ist, kann man nicht speziell eine einzelne Schicht überprüfen. Außerdem werden sämtliche Schichten wieder gelöscht, sodass nur immer eine Schicht vorhanden ist.\\
+
+Diese Funktion soll hierfür Abhilfe schaffen: Ähnlich wie im normalen Programm wird eine Schicht erzeugt. Jedoch werden alle 256 Schichten, sprich von 0 bis 255 nacheinander erzeugt und abgespeichert, in dem man mit einer while-Schleife alle Schichten durch iteriert.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{testErzeugenAllerSchichten.jpg}
+	\caption{Test zur Erzeugung aller Texturen / Schichten}
+	\label{fig:testErzeugenAllerSchichten}
+\end{figure}
+
+Diese befinden sich nun im Ordner des Programm und können einzeln angesehen werden. Damit kann man schnell alle Texturen durchgehen und jede Einzelne überprüfen.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.70\textwidth]{testallpictures.JPG}
+	\caption{Erzeugung aller Texturen (Bildausschnitt)}
+	\label{fig:testallpictures}
+\end{figure}
+
+
+\subsection{Überprüfung aller Textur-Größe}
+
+Da je nachdem welche .mhd-Datei man auswählt unterschiedliche Größen hat, benötigt man dessen Maße um die Leinwand darauf anzupassen. Diese Hilfsmethode gibt die Breite und die Höhe jeder einzelnen Schicht aus.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{checkheigh.jpg}
+	\caption{Test zur Überprüfung der Größe der Texturen}
+	\label{fig:checkheigh}
+\end{figure}
+
+Dadurch kann man durch die Konsole schnell feststellen, ob eine einzelne Schicht eventuell ein Problem erzeugt oder ob man die Leinwand neu justieren muss.
+
+
+\section{Exkurs: Basic VR-Funktionen}\label{vrfunktion}
+
+In diesem Exkurs wird kurz dargestellt, wie die VR-Funktionen von Vizard funktionieren. Da diese standardmäßig von dem Programm vorgegeben werden, werden diese extern von der Implementierung behandeln.
+
+\chapter{Implementierung der Steuerung}\label{implenSteuerung}
+
+Um eine problemlose Entwicklung des Programms erfüllen zu können, muss man immer bedenken, dass man nicht immer jede Funktion sinnvoll in einer virtuellen Umgebung testen kann. Zwar ist das oberste Ziel der Arbeit, eine optimale Steuerung mit virtuellen Eingabegeräten zu ermöglichen, dennoch darf ein alternative Steuerungs, vorzugsweise mit Maus und Tastatur nicht vergessen. \\
+
+Jedoch muss man bedenken, dass beide Eingabemöglichkeiten, am Monitor und mit einem HMD, zwei unterschiedliche Oberflächen benötigen. Während man in der virtuellen Umgebung quasi direkt mit den Objekten interagiert, benötigt man für die Maus zum Beispiel Schaltflächen und Regler. Jedoch sollten beide Bedienungsmöglichkeiten durchgehend verwendbar sein, ohne dass man den Quelltext bearbeiten muss. Hierbei liefert Vizard jedoch die Möglichkeit, die grafische Benutzeroberfläche (GUI) auszublenden, so dass man diese nur am Monitor, jedoch nicht in der Virtuellen Realität sieht.
+
+\section{Maus-Steuerung mit GUI}\label{controlMouse}
+
+Auch wenn das Projekt am Ende ausschließlich mit einem HMD funktionieren soll, ist man doch die meiste Zeit das dabei beschäftigt das Programm per Maus und Tastatur zu bedienen. Hierfür wurde ein einfacher Slider in die Oberfläche eingebaut, welche man mit dem Mauszeiger bedienen kann:
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{SliceChanger.jpg}
+	\caption{Regler für die einzelnen Schichten}
+	\label{fig:SliceChanger}
+\end{figure}
+
+Der Code ist dabei die Standard-Einstellung für Vizard, um einen Slider zu erstellen: 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{slidercode.JPG}
+	\caption{Code für den Slider}
+	\label{fig:slidercode}
+\end{figure}
+
+Die Funktionalität ist dabei identisch mit dem aus dem Vizard-Tutorial. Über den Regler lässt sich nun wie im Kapitel (Regler) beschrieben den Wert der neuen Schicht einstellen.\\
+
+Da bei auskommentierter VR-Einstellungen keine Bewegung notwendig ist (die Textur wurde so festgelegt, dass diese mittig platziert wurde), wurden im Gegensatz zur VR-Steuerung keine Tasten für das Bewegen der Kamera festgelegt.\\
+
+Als Vorläufer für eine weitere Funktion wurden die Tasten "`a, s, d, f"' mit der Rotation des Bildes belegt:\\
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.90\textwidth]{rotationCode.JPG}
+	\caption{Code für das Rotieren der Grafik}
+	\label{fig:rotationCode}
+\end{figure}
+
+Hiermit lässt sich die Grafik entweder nach links oder rechts (a und d) oder nach oben und unten drehen. Aufgrund von Zeitmangel konnte die eigentliche Funktion nicht mehr implementiert werden: Anstelle der Grafik sollte sich eigentlich die Schicht drehen. Da aktuell nur eine Seite der Schicht dargestellt wird sollte damit eine 3-dimensionale Ansicht ermöglicht werden.
+
+\section{Virtuelle Steuerung mit VizconnecI}\label{controlVR}
+
+Da die finale Version ausschließlich mit in der virtuellen Realität und dementsprechenden Eingabegeräten funktionen soll, muss eine Lösung gefunden werden die genau dies schafft. Da Vizard das Tool Vizconnect integriert hat, war es die logische Entscheidung, dieses für diese Arbeit zu verwenden.\\
+
+Vizconnect selbst eine Benutzeroberfälche, mit der man per Maus ein entsprechendes Template zusammenstellen kann. Zwar bietet es die Möglichkeit, eine Standard-Set auszuwählen, jedoch konnte man anfangs damit die Touch-Controller nicht bedienen. Erst nach einem Update von Vizard 5 auf Vizard 6 (mit einem neuen Firmware-Update für die Touch-Controller) konnte man diese Templates verwenden. Für diese Arbeit wurde jedoch ein eigenenständiges, modizifiertes Set verwendet.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.90\textwidth]{vizconnect.JPG}
+	\caption{Vizconnect}
+	\label{fig:vizconnect}
+\end{figure}
+
+Im Bild oben wird das normale Benutzertool von Vizconnect angezeigt. Um in dieser Aufgabe ein funktionierende Bewegung zu erzeugen, musste man folgende Schritte machen:
+
+ \begin{itemize}
+      \item Tracker
+      \begin{itemize}
+         \item Unter Tracker muss man die Elemente einstellen, die in der virtuellen Realität erkannt werden. In dieser Arbeit war es der linke und rechte Touch-Controller, sowohl das HMD, ausgehend als Kamera. Jedoch werden hier nicht explizi die Geräte selbst eingestellt, sondern nur die Option, dass man solche erkennt. Im aktuellen Stand würde das Programm erkennen, dass es 2 Hände und einen Kopf gibt. Jedoch muss diese erst noch mit den passenden Eingabe-Möglichkeiten verknüpfen. Manuell angepasst  werden musste man unter anderem die Kopfhöhe, da diese sonst im Boden versunken wäre. 
+				
+				\begin{figure}[htbp]
+					\centering
+						\includegraphics[width=0.90\textwidth]{offsetheadtracker.JPG}
+					\caption{Einstellungen für den Head-Tracker (HMD)}
+					\label{fig:offsetheadtracker}
+				\end{figure}
+				
+      \end{itemize}
+      \item Display
+      \begin{itemize}
+         \item Während man im Tracker erstmal die Geräte festlegt, welche erkannt werden sollen, muss man hier festlegen, welches als Display dienen soll. In dieser Arbeit wurde die Oculus Rift als Typ HMD festgelegt.
+      \end{itemize}
+			\item Inputs
+      \begin{itemize}
+         \item Ebenfalls wie beim Display wählt man hier die zu den beiden Händen verknüpfende Eingabe-Geräte aus. Gewählt wurde hier die der linke und rechte Oculus Touch-Controller. Man ist hier jedoch nicht auf Geräte, die ausschließlich in der virtuellen Umgebung funktionieren beschränkt. Neben Maus und Tastatur kann man auch zum Beispiel einen Controller verwenden.
+      \end{itemize}
+				\item Transport
+      \begin{itemize}
+         \item In dieser Einstellung war es möglich, unterschiedliche Bewegungsarten auszuwählen, die simuliert werden. Hier wurde die Wand Magic Carpet verwendet, so dass man sich frei per Stick bewegen kann.
+      \end{itemize}
+				\item Avatar
+      \begin{itemize}
+         \item Um alle Einstellungen, die man bisher vorgenommen hat verwenden zu können, muss man einen Avatar erstellen. Dies kann man quasi vergleichen mit einer Spielfigur. Dessen Hände (der linke und rechte Touch-Controller) und Kopf wurden damit verknüpft. In unserer Einstellung simuliert das jedoch nur einen Körper. Eine Third-Person-Sicht, so dass man das Charakter-Modell sehen kann, wäre möglich, aber nicht sinnvoll für diese Aufgabe.
+      \end{itemize}
+				\item Tools
+      \begin{itemize}
+         \item Der wichtigste Bereich in Vizconnect ist der Tools-Tab: Hier lassen sich die einzelnen Funktionen, die man mit den eingestellten Input-Geräten verwenden kann, festlegen. Die wohl wichtigste Funktion ist dabei die Grabber-Funktion: Hiermit lässt sich einstellen, dass man Objekte (wie eben zum Beispiel unsere Grafik) greifen kann, herumtragen, etc. Eine weitere wichtige Funktion ist der Highlighter. Hiermit kann man mit einem Laser-Pointer auf Objekte zeigen, und diese markieren.
+				
+				
+				\begin{figure}[htbp]
+					\centering
+						\includegraphics[width=0.90\textwidth]{toolstab.JPG}
+					\caption{Funktionen im Tools-Tab}
+					\label{fig:toolstab}
+				\end{figure}	
+				
+      \end{itemize}
+				\item Scene Graph
+      \begin{itemize}
+         \item Alle angelegte Optionen lassen sich nun im Scene Graph verbinden: Ausgehend von dem gewählten Transport muss man den Avatar, mit seinen 3 Eigenschaften (linke/rechte Hand, Kopf) verknüpfen. Die angelegten Tools lassen sich hier mit Drag & Drop so verbinden, wie man es braucht. Damit sind die Einstellungen in Vizconnect abgeschlossen.
+				
+				
+				\begin{figure}[htbp]
+					\centering
+						\includegraphics{scenegrap.JPG}
+					\caption{Fertige Scene Graph}
+					\label{fig:scenegrap}
+				\end{figure}
+				
+				
+      \end{itemize}
+      \end{itemize}
+
+Damit sollte nun in Vizard die Steuerung in der VR geschrieben werden. Die eigentliche Funktionalität sollte darin bestehen, dass man mit dem Highlighter das Bild auswählen kann (aus der Entfernung), und man dieses dann bewegt, wenn man zum Beispiel den Trigger des Controllers hält und damit die Grapper-Funktion auslöst. Auch sollte damit die Tasten Rotation-Funktionen der Tasten a, d, w und s auf den Controller gemappt werden. \\
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{highlightervr.JPG}
+	\caption{Highlighter in Vizard VR, ohne Funktion (Bild wurde ausgeschnitten)}
+	\label{fig:highlightervr}
+\end{figure}
+
+Jedoch hat Vizard bzw. Vizconnect nicht von Haus die Fähigkeit, mehrere Funktionen miteinander zu kombinieren. Laut Recherchen im Internet (https://forum.worldviz.com/showthread.php?t=5888) gibt es zwar die Möglichkeit, die vizconnect.py anzupassen, jedoch konnte weder das Beispiel das gegeben wurde noch ein selber geschriebenes in der Virtuellen Realität verwendet, bzw. im Vizconnect angepasst werden. Zwar funktionierte das Beispiel für die Desktop-Variante, jedoch soll hier ja diese Funktion gar nicht gegeben sein.\\
+
+Das nächste Problem: Wenn man die vizconnect.py (in diesem Projekt "`oculus_control.py"') manuell bearbeitet, kommt eine Fehlermeldung bei Vizconnect (siehe Bild unten). Zwar lässt sich weiterhin die gewünschten Funktionen bedienen, dennoch konnte man damit keine Verknüpfungen erzeugen. Stellenweise gingen die vorher eingestellten Funktionen, wie zum Beispiel der Highlighter nicht mehr.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{nodemodified.JPG}
+	\caption{Ansicht, wenn ein Element in Vizconnect modifiziert wurde}
+	\label{fig:nodemodified}
+\end{figure}
+
+Durch die aufgetretene Probleme und fehlender Zeit konnte keine sinnvolle Lösung für dieses Problem gefunden werden. Zwar wurde dennoch eine sinnvolle Steuerung für die Bewegung eingestellt (siehe Kapitel unten), dennoch wurde hier nicht das Ziel erreicht eine funktionierende Steuerung zu finden. 
+
+\subsection{Belegte Steuerung}
+
+Folgendes Steuerungs-Schema wurden für beide Touch-Controller in Vizconnect festgelegt:
+
+\begin{itemize}
+      \item Linker Touch-Controller
+      \begin{itemize}
+         \item Analog-Stick: Mit der Bewegung nach oben bzw. nach unten bewegt man sich im Raum entweder nach oben oder nach unten.
+					
+      \end{itemize}
+      \item Rechter Touch-Controller
+      \begin{itemize}
+         \item Analog-Stick: Mit diesem bewegt man sich im Raum auf einer Ebene, je nachdem in welche Richtung man lenkt (Stick nach links, Bewegung nach links, usw.)
+				\item A-Taste: Wenn man die A-Taste gedrück hält aktiviert man den Highlighter, womit das Bild hervorgehoben werden kann (grüner Rahmen). Abgesehen davon hat es keine Funktion.
+				\item Unterer Trigger: Mit diesem Taster aktiviert man die Grapper-Funktion, welche keine Funktion zugeordnet wurde.
+      \end{itemize}
+     \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Beurteilung}\label{result}
+
+In diesem Kapitel wird das Ergebnis vorgestellt und anhand dessen den aktuellen Softwarestand bewertet.
+
+\section{Ergebnis}\label{ergebnis}
+
+Dadurch, dass die Steuerung in der VR mit den Touch-Controllern nicht funktioniert, muss das Gerät mit Tastatur und Maus bedient werden. Alternativ kann man die VR-Funktion ausstellen, so dass man es komplett am Desktop steuern kann. Das Bedienelement, um die Schichten hin und her zu schieben bleibt immer bestehen, wird jedoch bei der Verwendung von eines HMDs ausgeblendet.\\
+
+Das Verschieben der Schichten funktioniert ohne eine sichbare Verzögerung. Eine 
+
+\section{Bewertung}\label{bewertung}
+
+Durch die Probleme bei der Steuerung in einer virtuellen Umgebung, dass man keinen Grapper mit einem Laserpointer verknüpfen kann, ist die Steuerung in dieser quasi nicht möglich. Die Bearbeitung der Vizconnect-Datei wäre die einzige Möglichkeit gewesen, dieses Problem zu beseitigen. Allerdings führt das zu Probleme bei der Bearbeitung der Steuerung in Vizconnect selber, da diese grundsätzlich Probleme bei manipulierten Dateien hat.\\
+
+Aufgrund von Zeitmangel konnte die .STL-Datei nicht auf über die Leinwand, wo die Schichten abgebildet werden, gelegt werden. Auch die Möglichkeit, die Schicht (nicht die Leinwand) zu drehen fehlt. Dadurch ist die Funktionalität des Programms ziemlich beschränkt. Auch muss man den Code selbst jedes Mal ändern, möchte man eine andere .mhd-/.raw-Datei als die Carp.mhd. verwenden. Hier fehlt zum Beispiel eine Funktion, während des Programms über zum Beispiel eine Konsole eine neue Datei auszuwählen.\\
+
+Abgesehen von den fehlenden Features funktioniert das Verschieben der einzelnen Schichten deutlich schneller als zum Beispiel in ParaView. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Ausblick und Verbesserungsmöglichkeiten}\label{ausblick}
+
+Im folgenden Kapitel wird kurz vorgestellt, wie man das Projekt verbessern kann. Auch wird ein kurzer Blick in die Zukunft geworfen, in wie weit das Thema Medizin und Virtueller Realität weiterentwickelt wird.
+
+\section{Korrekturmöglichkeiten des Projekts}\label{verbessern}
+
+Obwohl das Ergebnis durchaus zu gebrauchen ist, bietet es sehr viele Verbesserungsmöglichkeiten, oder haben zumindest dahingehend Aufschluss gegeben, ob es nicht doch besser wäre eine alternative Plattform zu verwenden. 
+
+\begin{itemize}
+		\item Eine aufwändigere Möglichkeit wäre es, speziell für Vizard VR Module zu schreiben, und diese dann zu verwenden. Wie im Kapitel XY angemerkt, ist es grundsätzlich möglich zum Beispiel die Vizconnect-Datei zu manipulieren. Je nach Aufwandsschätzung könnte man hier ansetzten und externe Tools entwickeln, die speziell für diesen Fall hier gedacht sind. 
+
+		\item Ein völlig anderer Ansatz an die Aufgabe könnte auch unter Umständen eine Verbesserung des Programms hervorrufen. So könnte man zum Beispiel das Projekt so umgestalten, dass man anstelle von eines Avatars (also uns selber) einen Roboter steuert, der einen Greifarm hat. Dies hätte den Vorteil, dass man den Greifarm mit der Grabber-Funktion verknüpfen kann, so dass dieses die einzelnen Schichten bewegt. Eine alternative Möglichkeit wäre gewesen, wenn man zum Beispiel ein Bedienungselement, wie zum Beispiel eine Konsole (physikalisch) in den virtuellen Raum platziert, wodurch man dadurch die Schichten durchgeht.
+
+      \item Die erste Verbesserungsmöglichkeit, die man untersuchen sollte wäre ob eine alternative Entwicklungsumgebung, wie zum Beispiel die Unity- oder Unreal-Engine doch eine Verbesserung darstellt. Anhand den hier erworbene Kenntnisse sollte man überprüfen, ob die Fehler die hier aufgetreten sind durch andere Programme gelöst werden können.
+			
+\end{itemize}
+
+\section{Zukunft}\label{ausblickText}
+
+Da die Computer-Technik immer weiterentwickelt wird und auch die Medizin immer größere Fortschritte macht, wird der Faktor VR in der Zukunft eine noch größere Rolle in der Medizin spielen.\\
+
+So hat diese Entwicklung den Vorteil, dass man in naher Zukunft möglicherweise auf die Dissektion - also die Zerstückelung - von menschlicher Leichen verzichten kann, da man dies alles auch simulieren könnte (https://www.aerztezeitung.de/praxis_wirtschaft/e-health/article/976048/revolution-medizinstudium-virtuelle-realitaet-sorgt-anatomie-neuen-format.html). Auch erhofft man sich so, dass man neue Erkenntnisse über den Menschen herausfinden kann (https://www.industry-of-things.de/mit-virtual-reality-durch-die-blutgefaesse-wandern-a-770091/). Dies alles zeigt, dass ein Weiterentwicklung und natürlich auch eine Nutzung der neuen, gegebenen Mittel weitaus hilfreicher sein können, als das man es vermutet.\\
+
+Aber auch Abseits der chirurgischen Medizin wird man in der Zukunft immer mehr auf die Virtueller Realität setzten. Da man damit auch Behandlungen gegen Ängste erfolgreich bekämpfen kann, aber die Mittel für eine Konfrontationstherapie - also der Bekämpfung der betroffenen Angst, vor Ort - begrenzt ist, kann man durch eine simulierte, virtueller Umgebung die Patienten wesentlich kostengünstiger und schneller helfen. (https://www.zeit.de/2018/27/virtual-reality-angststoerung-psychotherapie-technik/seite-2)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Fazit}\label{fazit}
+
+Dadurch, dass sich die Entwicklung in der Virtuellen Realität immer interessanter werden war die Verknüpfung dieses Themas mit einer weiteren großen Branche, der Medizin, sehr sinnvoll. Dass diese Kombination in naher Zukunft immer relevanter werden, ist unausweichlich. Die Mittel sind da, die Tools sind frei zugänglich, so dass man keine große Einstiegshürde hat, um an dieser Forschung teilzunehmen. Da die meisten Entwicklungs-Umgebungen noch weiter verbessert werden, und auch speziell für andere Bereiche gedachte Tools wie die Unreal- oder Unity-Engine im VR-Bereich extrem leistungsstark sind, ist die Auswahl an den Möglichkeiten vorhanden. Und auch die HMDs werden weiterentwickelt, so dass man davon ausgehen kann das in Zukunft das Thema VR immer wichtiger werden wird auf dem Weltmarkt und in der Forschung. \\
+
+Schlussendlich hat diese Arbeit jedoch nicht das gewünschte Ergebnis geliefert. Zu viele Probleme gab es bei der Durchführung. Etliche Ansätze, zu denen Code und auch Testverfahren entwickelt wurden, wurde aufgrund Fehlinformationen wieder fallengelassen und zum Schluss muss man auch die verwendete Software in Frage stellen, ob diese überhaupt Fähig genug ist das erwünschte Ziel zu realisieren. Viele Kriterien, die man an die Software gestellt hat, konnten nicht vollständig oder teilweise gar nicht realisiert werden. Grundsätzlich hätte eine bessere Auflistung der Features und Wünsche, die man am Schluss benötigt, und eine Überprüfung dessen was in Vizard VR möglich ist zu Beginn der Bearbeitung sehr viel Sinn ergeben. Auch eine Kontaktaufnahme mit den Entwicklern von Vizard (WorldViz) wäre hilfreich gewesen, um von vorneweg zu klären, was funktioniert und was nicht. Hier wurden klare Fehler gemacht, die man bei einer Weiter- bzw. Neuentwicklung unbedingt berücksichtigen soll.\\
+
+Dennoch ist das Endergebnis eine Basis, worauf man aufbauen kann. Auch sind die Erkenntnisse, die diese Arbeit gebracht hat hilfreich, wenn man sich nochmal an diesem Thema versuchen möchte. Mit dieser Arbeit hat man zumindest einen Überblick, in wie weit Vizard VR hilfreich bei der Realisierung von VR-Projekte ist, und auch wo die Probleme bei dieser Software liegen. 
+\clearpage
+%% <== Ende der Hinweise
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LITERATUR UND ANDERE VERZEICHNISSE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
+\addtocontents{toc}{\protect\vspace*{\baselineskip}}
+
+%% Literaturverzeichnis
+%% ==> Eine Datei 'literatur.bib' wird hierfür benötigt.
+%% ==> Sie müssen hierfür BibTeX verwenden (Projekt | Eigenschaften... | BibTeX)
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\nocite{*} %Auch nicht-zitierte BibTeX-Einträge werden angezeigt.
+\bibliographystyle{alpha} %Art der Ausgabe: plain / apalike / amsalpha / ...
+\bibliography{literatur} %Eine Datei 'literatur.bib' wird hierfür benötigt.
+[001] https://www.tagesspiegel.de/politik/schule-und-digitalisierung-wie-schulen-sich-fuer-die-digitale-zukunft-aendern-muessen/21059542.html\newline
+[002] https://www.msn.com/de-de/nachrichten/wissenundtechnik/künstliche-intelligenz-in-der-medizin-der-computer-weiß-was-dir-fehlt/ar-BBPwl8u \newline
+[003] https://www.vrnerds.de/oculus-education-oculus-erweitert-medizinische-vr-ausbildung-auf-neue-institutionen/ \newline
+[004] https://thinkmobiles.com/de/blog/virtuelle-realitaet-medizin/ \newline
+[005] https://store.steampowered.com/app/548010/3D_Organon_VR_Anatomy/ \newline
+[006] https://medialist.info/2018/01/26/vr-healthcare-virtual-reality-in-der-medizin/ \newline
+[007] https://www.unrealengine.com/en-US/vr \newline
+[008] https://docs.worldviz.com/vizard/latest/index.htm \newline
+[009] https://docs.worldviz.com/vizard/latest/World_demos.htm \newline
+[010] https://www.python.org/about/ \newline
+[011] https://itk.org/Wiki/ITK/MetaIO/Documentation
+[012] https://www.wareable.com/vr/vr-headset-motion-sickness-solution-777
+
+%% Abbildungsverzeichnis
+\clearpage
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+
+%% Tabellenverzeichnis
+%\clearpage
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+%\listoftables
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ANHÄNGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+%% ==> Schreiben Sie hier Ihren Text oder fügen Sie externe Dateien ein.
+
+%\input{Dateiname} %Eine Datei 'Dateiname.tex' wird hierfür benötigt.
+
+
+\end{document}
+
