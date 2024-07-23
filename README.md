@@ -1,5 +1,5 @@
 <h2>Bachelor-Arbeit:</h2><br>
-<H1>Verarbeitung medizinischer Daten in der VR</H1>
+<h1>Verarbeitung medizinischer Daten in der VR</h1>
 <br><br>
 <img src="port_bachelor.png">
 <br><br>
