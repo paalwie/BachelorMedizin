@@ -3,6 +3,6 @@
 <p></p>
 <img src="port_bachelor.png">
 <p></p>
-Komplette Arbeit (PDF) verfügbar hier: <a href="https://github.com/paalwie/BachelorMedizin/blob/main/arbeit.pdf">Klick</a>
+Komplette Arbeit (PDF) hier verfügbar: <a href="https://github.com/paalwie/BachelorMedizin/blob/main/arbeit.pdf">Klick</a>
 <br><br>
 Code-Schnipsel sind nur Beispiele und sollten in der Regel ohne passende Tools (Vizard, VR-Geräte, usw.) nicht funktionieren.
